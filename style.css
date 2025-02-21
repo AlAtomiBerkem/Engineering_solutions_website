@@ -9,11 +9,12 @@ body {
     margin: 0;
     padding: 0;
     background-color: white;
+    font-family: 'Varela Round', sans-serif;
 }
 
 .wrapper {
-    width: 100%; /* Занимает всю ширину экрана */
-    margin: 0 auto; /* Центрирование обертки по горизонтали */
+    width: 100%;
+    margin: 0 auto;
 }
 
 .container {
@@ -24,15 +25,85 @@ body {
     width: 100%;
     height: 70px;
     background-color: #035F8F;
+    align-items: center;
+    justify-content: center;
+}
+.header-content {
+    width: 100%;
+    height: 70px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
+
+.header-logo{
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__button {
+ padding-bottom:25px;
+}
+
+.header__button-button {
+    margin-top: 30px;
+    width: 200px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #E4BD3F;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.header__button-button:hover {
+    transition: transform 1.5s;
+    color: #c37e1b;
+    font-size: 14px;
+
+    .button-svg {
+        transition: transform .1s;
+        width: 27px;
+        height: 27px;
+    }
+}
+
+.button-svg {
+    width: 25px;
+    height: 25px;
+    padding-left: 20px;
+}
+
+.header-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 
 .header__company-name {
     font-size: 35px;
     color: white;
+    padding-right: 380px;
 }
 
+@media (max-width: 1200px) {
+    .header__company-name {
+        font-size: 30px; /* Уменьшаем шрифт для экранов меньше 1200px */
+    }
+}
+
+@media (max-width: 768px) {
+    .header__company-name {
+        font-size: 25px; /* Уменьшаем шрифт для экранов меньше 768px */
+    }
+}
 .navigate {
     width: 100%;
     height: 56px;
@@ -91,9 +162,8 @@ body {
     color: white;
     text-align: left;
     font-size: 26px;
-    line-height: 1.6; /* Высота строки */
-    /*hyphens: auto;*/
-    text-shadow: 0px 1px 0px #035F8F;
+    line-height: 1.6;
+    text-shadow: 0 1px 0 #035F8F;
 }
 
 
@@ -130,26 +200,26 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 10px; /* Отступы между элементами */
+    gap: 10px;
     width: 250px;
     height: 200px;
     background-color: rgb(240, 244, 245);
     border-radius: 10px;
-    padding: 15px; /* Добавляем отступы внутри контейнера */
+    padding: 15px;
 }
 .users__items-icon {
-    width: 40px; /* Ширина контейнера */
-    height: 40px; /* Высота контейнера */
-    display: flex; /* Используем Flexbox для центрирования изображения */
-    justify-content: center; /* Центрирование по горизонтали */
-    align-items: center; /* Центрирование по вертикали */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding-left: 40px;
 }
 
 .users__items-icon img {
-    width: 100%; /* Изображение занимает всю ширину контейнера */
-    height: 100%; /* Изображение занимает всю высоту контейнера */
-    object-fit: contain; /* Изображение сохраняет пропорции и вписывается в контейнер */
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .users__items-text {
@@ -172,19 +242,20 @@ body {
     color: black;
     border-radius: 5px;
     cursor: pointer;
-    /*font-weight: 600; !* Нормальный шрифт *!*/
 }
 
 .blog2 {
     width: 100%;
     height: 340px;
-    background-color: #E7EFF6;
+    background-image: url('./assets/img/blog2.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .blog2-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     height: 340px;
 }
@@ -193,24 +264,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 500px;
+    width: 530px;
     height: 270px;
     background-color: #0393A8;
-    margin-right: 25px;
-    margin-left: 10px;
-    border-radius: 5px;
+    margin-left: 20px;
 }
 
 .connected_gas {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 500px;
+    width: 530px;
     height: 270px;
     background-color: #01AB8C;
-    margin-left: 25px;
-    margin-right: 10px;
-    border-radius: 5px;
+    margin-right: 20px;
 }
 
 .disconnected_gas-text {
@@ -238,20 +305,36 @@ body {
 .footer_content {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 100%;
     height: 150px;
-    background-color: #0033dd;
 }
 
 .footer_content-logo {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.footer_content-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .footer_content-company_name {
-
+    font-size: 25px;
+    color: #e5eded;
 }
 
 .footer_content-contacts {
+    display: flex;
+    color: #e5eded;
+}
 
+.footer_content-contacts ul {
+    list-style: none;
+    padding: 0 -20px;
 }
