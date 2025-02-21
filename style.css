@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.wrapper {
+    width: 100%; /* Занимает всю ширину экрана */
+    margin: 0 auto; /* Центрирование обертки по горизонтали */
+}
+
+.container {
+    padding: 0 80px;
+}
+
+.header {
+    width: 100%;
+    height: 70px;
+    background-color: #035F8F;
+    display: flex;
+    align-items: center;
+}
+
+.header__company-name {
+    font-size: 35px;
+    color: white;
+}
+
+.navigate {
+    width: 100%;
+    height: 56px;
+    background-color: #025178;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigate__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigate__item {
+    margin: 0 20px;
+}
+
+.navigate__link {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    width: 100%;
+    height: 400px;
+    background-image: url('./assets/img/hero_photo.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 400px;
+    background-color: rgba(2, 81, 120, 0.55);
+    flex-direction: column;
+    margin-right: 80px;
+}
+
+.hero__text-box {
+    margin-top: -20px;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    padding-left: 10px;
+}
+
+.hero__text-box p {
+    color: white;
+    text-align: left;
+    font-size: 26px;
+    line-height: 1.6; /* Высота строки */
+    /*hyphens: auto;*/
+    text-shadow: 0px 1px 0px #035F8F;
+}
+
+
+.hero-button {
+    margin-top: 30px;
+    width: 200px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #E4BD3F;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.users {
+    width: 100%;
+    height: 280px;
+    background-color: #035F8F;
+}
+
+.users__block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 280px;
+}
+
+.users__items {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px; /* Отступы между элементами */
+    width: 250px;
+    height: 200px;
+    background-color: rgb(240, 244, 245);
+    border-radius: 10px;
+    padding: 15px; /* Добавляем отступы внутри контейнера */
+}
+.users__items-icon {
+    width: 40px; /* Ширина контейнера */
+    height: 40px; /* Высота контейнера */
+    display: flex; /* Используем Flexbox для центрирования изображения */
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    padding-left: 40px;
+}
+
+.users__items-icon img {
+    width: 100%; /* Изображение занимает всю ширину контейнера */
+    height: 100%; /* Изображение занимает всю высоту контейнера */
+    object-fit: contain; /* Изображение сохраняет пропорции и вписывается в контейнер */
+}
+
+.users__items-text {
+    font-size: 16px;
+}
+
+.users__items-button {
+    display: flex;
+    align-items: end;
+    margin-bottom: 15px;
+}
+
+.users__items-button button {
+    width: 150px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #ebebed;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    /*font-weight: 600; !* Нормальный шрифт *!*/
+}
+
+.blog2 {
+    width: 100%;
+    height: 340px;
+    background-color: #E7EFF6;
+}
+
+.blog2-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 340px;
+}
+
+.disconnected_gas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 270px;
+    background-color: #0393A8;
+    margin-right: 25px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.connected_gas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 270px;
+    background-color: #01AB8C;
+    margin-left: 25px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.disconnected_gas-text {
+    display: flex;
+}
+
+.connected_gas-text {
+    display: flex;
+}
+
+.disconnected_gas-img {
+    display: flex;
+}
+
+.connected_gas-img {
+    display: flex;
+}
+
+.footer {
+    width: 100%;
+    height: 150px;
+    background-color: #035F8F;
+}
+
+.footer_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 150px;
+    background-color: #0033dd;
+}
+
+.footer_content-logo {
+
+}
+
+.footer_content-company_name {
+
+}
+
+.footer_content-contacts {
+
+}
