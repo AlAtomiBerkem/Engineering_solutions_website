@@ -64,7 +64,7 @@ body {
 
 .header__button-button:hover {
     transition: transform 1.5s;
-    color: #c37e1b;
+    color: #0393A8;
     font-size: 14px;
 
     .button-svg {
@@ -91,17 +91,21 @@ body {
     font-size: 30px;
     color: white;
     padding-right: 380px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
 }
 
 @media (max-width: 1200px) {
     .header__company-name {
-        font-size: 25px; /* Уменьшаем шрифт для экранов меньше 1200px */
+        font-size: 25px;
     }
 }
 
 @media (max-width: 768px) {
     .header__company-name {
-        font-size: 20px; /* Уменьшаем шрифт для экранов меньше 768px */
+        font-size: 20px;
     }
 }
 .navigate {
@@ -127,6 +131,27 @@ body {
 .navigate__link {
     color: white;
     text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.navigate__link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #0393A8;
+    transition: width 0.3s ease;
+}
+
+.navigate__link:hover {
+    color: #0393A8;
+}
+
+.navigate__link:hover::after {
+    width: 100%;
 }
 
 .hero {
@@ -151,7 +176,6 @@ body {
 }
 
 .hero__text-box {
-    margin-top: -20px;
     width: 300px;
     height: 250px;
     display: flex;
@@ -159,9 +183,10 @@ body {
 }
 
 .hero__text-box p {
+    padding-right: 5px;
     color: white;
     text-align: left;
-    font-size: 26px;
+    font-size: 25px;
     line-height: 1.6;
     text-shadow: 0 1px 0 #035F8F;
 }
@@ -206,7 +231,15 @@ body {
     background-color: rgb(240, 244, 245);
     border-radius: 10px;
     padding: 15px;
+    transition: all 0.3s ease;
 }
+
+.users__items:hover {
+    background-color: #dae1e1;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
 .users__items-icon {
     width: 40px;
     height: 40px;
@@ -220,10 +253,20 @@ body {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.users__items:hover .users__items-icon img {
+    transform: scale(1.1);
 }
 
 .users__items-text {
     font-size: 16px;
+    transition: all 0.3s ease; /* Плавный переход для текста */
+}
+
+.users__items:hover .users__items-text {
+    transform: translateY(-5px); /* Сдвиг текста вверх */
 }
 
 .users__items-button {
@@ -242,6 +285,13 @@ body {
     color: black;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.3s ease; /* Плавный переход для кнопки */
+}
+
+.users__items:hover .users__items-button button {
+    background-color: #6195FF; /* Новый цвет фона */
+    color: white; /* Новый цвет текста */
+    box-shadow: 0 4px 10px rgba(97, 149, 255, 0.3); /* Тень при наведении */
 }
 
 .blog2 {
@@ -394,7 +444,9 @@ body {
 
 .footer_content-company_name {
     font-size: 25px;
-    color: #e5eded;
+    color: white;
+    font-family: 'Playfair Display', serif; /* Подключение шрифта */
+    font-weight: 700; /* Жирное начертание */
 }
 
 .footer_content-contacts {
@@ -473,4 +525,11 @@ body {
 .maintenance__content-topic {
     padding-bottom: 20px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-info {
+
+}
+.contact-info__content {
+
 }
