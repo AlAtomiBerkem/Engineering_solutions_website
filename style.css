@@ -247,9 +247,10 @@ body {
 .blog2 {
     width: 100%;
     height: 340px;
-    background-image: url('./assets/img/blog2.jpg');
+    /*background-image: url('./assets/img/blog2.jpg');*/
     background-size: cover;
     background-position: center;
+    background-color: #d7e1dd;
 }
 
 .blog2-content {
@@ -260,41 +261,111 @@ body {
     height: 340px;
 }
 
-.disconnected_gas {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 530px;
-    height: 270px;
-    background-color: #0393A8;
-    margin-left: 20px;
-}
-
 .connected_gas {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 530px;
     height: 270px;
     background-color: #01AB8C;
     margin-right: 20px;
-}
-
-.disconnected_gas-text {
-    display: flex;
+    position: relative;
+    overflow: hidden;
 }
 
 .connected_gas-text {
-    display: flex;
-}
-
-.disconnected_gas-img {
-    display: flex;
+    position: absolute; /* Абсолютное позиционирование */
+    top: 20px; /* Отступ сверху */
+    left: 20px; /* Отступ слева */
+    width: calc(100% - 40px); /* Ширина текстового блока с учетом отступов */
+    z-index: 2; /* Чтобы текст был поверх изображения */
 }
 
 .connected_gas-img {
-    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 33.33%;
+    z-index: 1;
 }
+
+.connected_gas-img img {
+    width: 100%; /* Ширина изображения на всю ширину блока */
+    height: 100%; /* Высота изображения на всю высоту блока */
+    transition: transform 0.3s ease; /* Плавный переход для hover-эффекта */
+
+}
+
+.connected_gas:hover .connected_gas-img img {
+    transform: scale(1.1); /* Увеличение изображения при наведении */
+}
+
+.connected_gas-text p {
+    margin: 10px 0 0; /* Отступ сверху для параграфа */
+    font-size: 15px; /* Размер шрифта параграфа */
+    color: #fff; /* Цвет текста */
+    letter-spacing: 0.3px; /* Отступ между символами */
+    line-height: 1.5; /* Межстрочный интервал */
+    font-family: 'Arial', sans-serif; /* Шрифт */
+}
+
+.connected_gas-text h4 {
+    margin: 0;
+    font-size: 20px; /* Размер шрифта заголовка */
+    color: #fff; /* Цвет текста */
+}
+
+.disconnected_gas {
+    width: 530px;
+    height: 270px;
+    background-color: #0393A8;
+    margin-left: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.disconnected_gas-text {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 20px; /* Отступ сверху */
+    left: 20px; /* Отступ слева */
+    width: calc(100% - 40px); /* Ширина текстового блока с учетом отступов */
+    z-index: 2; /* Чтобы текст был поверх изображения */
+}
+
+.disconnected_gas-text h4 {
+    margin: 0;
+    font-size: 20px; /* Размер шрифта заголовка */
+    color: #fff; /* Цвет текста */
+}
+
+.disconnected_gas-text p {
+    margin: 10px 0 0; /* Отступ сверху для параграфа */
+    font-size: 15px; /* Размер шрифта параграфа */
+    color: #fff; /* Цвет текста */
+    letter-spacing: 0.3px; /* Отступ между символами */
+    line-height: 1.5; /* Межстрочный интервал */
+    font-family: 'Arial', sans-serif; /* Шрифт */
+}
+
+.disconnected_gas-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 33.33%;
+    z-index: 1;
+}
+
+.disconnected_gas-img img {
+    width: 100%; /* Ширина изображения на всю ширину блока */
+    height: 100%; /* Высота изображения на всю высоту блока */
+    object-fit: cover; /* Чтобы изображение заполнило весь блок */
+    transition: transform 0.3s ease; /* Плавный переход для hover-эффекта */
+
+}
+
+.disconnected_gas:hover .disconnected_gas-img img {
+    transform: scale(1.1); /* Увеличение изображения при наведении */
+}
+
 
 .footer {
     width: 100%;
