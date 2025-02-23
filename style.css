@@ -599,3 +599,110 @@ body {
     color: #666;
     line-height: 1.5;
 }
+
+
+/* Основные стили для страницы 404 */
+
+
+
+.error-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: #f0f4f8;
+    padding: 20px;
+}
+
+.error-page__content {
+    text-align: center;
+    max-width: 600px;
+}
+
+.error-page__title {
+    font-size: 120px;
+    font-weight: 700;
+    color: #035F8F;
+    margin: 0;
+    line-height: 1;
+}
+
+.error-page__description {
+    font-size: 24px;
+    color: #025178;
+    margin: 20px 0 40px;
+}
+
+.error-page__button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #0393A8;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.error-page__button:hover {
+    background-color: #035F8F;
+    transform: translateY(-2px);
+}
+
+.error-page__button:active {
+    background-color: #025178;
+    transform: translateY(0);
+}
+
+
+/* Основные стили для страницы технических работ*/
+.maintenance-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Высота страницы (можно настроить под ваш дизайн) */
+    background-color: #f0f4f8; /* Светлый фон для контраста */
+    padding: 20px;
+}
+
+.maintenance-page__content {
+    text-align: center;
+    max-width: 600px; /* Ограничиваем ширину контента */
+}
+
+.maintenance-page__title {
+    font-size: 72px; /* Большой размер для заголовка */
+    font-weight: 700; /* Жирный шрифт */
+    color: #035F8F; /* Основной цвет из вашей палитры */
+    margin: 0;
+    line-height: 1; /* Убираем лишний отступ */
+}
+
+.maintenance-page__description {
+    font-size: 24px; /* Размер текста */
+    color: #025178; /* Вторичный цвет из вашей палитры */
+    margin: 20px 0 40px; /* Отступы сверху и снизу */
+}
+
+.maintenance-page__button {
+    display: inline-block;
+    padding: 12px 24px; /* Отступы внутри кнопки */
+    font-size: 18px; /* Размер текста */
+    font-weight: 600; /* Жирный шрифт */
+    color: #fff; /* Белый текст */
+    background-color: #0393A8; /* Акцентный цвет из вашей палитры */
+    border-radius: 10px; /* Скругление углов */
+    text-decoration: none; /* Убираем подчеркивание */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Плавные переходы */
+}
+
+.maintenance-page__button:hover {
+    background-color: #035F8F; /* Изменение цвета при наведении */
+    transform: translateY(-2px); /* Сдвиг кнопки вверх */
+}
+
+.maintenance-page__button:active {
+    background-color: #025178; /* Изменение цвета при нажатии */
+    transform: translateY(0); /* Возврат к исходному положению */
+}
