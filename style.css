@@ -50,7 +50,7 @@ body {
 
 .header__button-button {
     margin-top: 30px;
-    width: 200px;
+    width: 160px;
     height: 40px;
     display: flex;
     justify-content: center;
@@ -60,18 +60,29 @@ body {
     color: black;
     border-radius: 10px;
     cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
 
-.header__button-button:hover {
-    transition: transform 1.5s;
-    color: #0393A8;
-    font-size: 14px;
+.header__button-button:active {
+    background-color: #C4981F;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+}
 
-    .button-svg {
-        transition: transform .1s;
-        width: 27px;
-        height: 27px;
-    }
+
+.header__button-button .button-svg {
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+}
+
+.header__button-button:hover .button-svg {
+    width: 27px;
+    height: 27px;
+    transform: rotate(360deg);
 }
 
 .button-svg {
@@ -204,6 +215,22 @@ body {
     color: black;
     border-radius: 10px;
     cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #D4A82F;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.hero-button:active {
+    background-color: #C4981F;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
 }
 
 .users {
@@ -262,11 +289,11 @@ body {
 
 .users__items-text {
     font-size: 16px;
-    transition: all 0.3s ease; /* Плавный переход для текста */
+    transition: all 0.3s ease;
 }
 
 .users__items:hover .users__items-text {
-    transform: translateY(-5px); /* Сдвиг текста вверх */
+    transform: translateY(-5px);
 }
 
 .users__items-button {
@@ -285,13 +312,13 @@ body {
     color: black;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease; /* Плавный переход для кнопки */
+    transition: all 0.3s ease;
 }
 
 .users__items:hover .users__items-button button {
-    background-color: #6195FF; /* Новый цвет фона */
-    color: white; /* Новый цвет текста */
-    box-shadow: 0 4px 10px rgba(97, 149, 255, 0.3); /* Тень при наведении */
+    background-color: #6195FF;
+    color: white;
+    box-shadow: 0 4px 10px rgba(97, 149, 255, 0.3);
 }
 
 .blog2 {
@@ -445,8 +472,8 @@ body {
 .footer_content-company_name {
     font-size: 25px;
     color: white;
-    font-family: 'Playfair Display', serif; /* Подключение шрифта */
-    font-weight: 700; /* Жирное начертание */
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
 }
 
 .footer_content-contacts {
@@ -528,8 +555,47 @@ body {
 }
 
 .contact-info {
-
+    width: 100%;
+    background-color: #dae1e1;
+    padding: 60px 0;
 }
-.contact-info__content {
 
+.contact-info__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contact__items {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact__items:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact__item-icon img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.contact__item-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact__item-valuer {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
 }
