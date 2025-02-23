@@ -37,8 +37,8 @@ body {
 }
 
 .header-logo{
-    width: 70px;
-    height: 70px;
+    width: 65px;
+    height: 65px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,7 +50,7 @@ body {
 
 .header__button-button {
     margin-top: 30px;
-    width: 200px;
+    width: 160px;
     height: 40px;
     display: flex;
     justify-content: center;
@@ -60,18 +60,29 @@ body {
     color: black;
     border-radius: 10px;
     cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
 
-.header__button-button:hover {
-    transition: transform 1.5s;
-    color: #c37e1b;
-    font-size: 14px;
+.header__button-button:active {
+    background-color: #C4981F;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+}
 
-    .button-svg {
-        transition: transform .1s;
-        width: 27px;
-        height: 27px;
-    }
+
+.header__button-button .button-svg {
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+}
+
+.header__button-button:hover .button-svg {
+    width: 27px;
+    height: 27px;
+    transform: rotate(360deg);
 }
 
 .button-svg {
@@ -88,20 +99,24 @@ body {
 
 
 .header__company-name {
-    font-size: 35px;
+    font-size: 30px;
     color: white;
     padding-right: 380px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
 }
 
 @media (max-width: 1200px) {
     .header__company-name {
-        font-size: 30px; /* Уменьшаем шрифт для экранов меньше 1200px */
+        font-size: 25px;
     }
 }
 
 @media (max-width: 768px) {
     .header__company-name {
-        font-size: 25px; /* Уменьшаем шрифт для экранов меньше 768px */
+        font-size: 20px;
     }
 }
 .navigate {
@@ -127,6 +142,27 @@ body {
 .navigate__link {
     color: white;
     text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.navigate__link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #0393A8;
+    transition: width 0.3s ease;
+}
+
+.navigate__link:hover {
+    color: #0393A8;
+}
+
+.navigate__link:hover::after {
+    width: 100%;
 }
 
 .hero {
@@ -151,7 +187,6 @@ body {
 }
 
 .hero__text-box {
-    margin-top: -20px;
     width: 300px;
     height: 250px;
     display: flex;
@@ -159,9 +194,10 @@ body {
 }
 
 .hero__text-box p {
+    padding-right: 5px;
     color: white;
     text-align: left;
-    font-size: 26px;
+    font-size: 25px;
     line-height: 1.6;
     text-shadow: 0 1px 0 #035F8F;
 }
@@ -179,6 +215,22 @@ body {
     color: black;
     border-radius: 10px;
     cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #D4A82F;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.hero-button:active {
+    background-color: #C4981F;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
 }
 
 .users {
@@ -206,7 +258,15 @@ body {
     background-color: rgb(240, 244, 245);
     border-radius: 10px;
     padding: 15px;
+    transition: all 0.3s ease;
 }
+
+.users__items:hover {
+    background-color: #dae1e1;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
 .users__items-icon {
     width: 40px;
     height: 40px;
@@ -220,10 +280,20 @@ body {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.users__items:hover .users__items-icon img {
+    transform: scale(1.1);
 }
 
 .users__items-text {
     font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.users__items:hover .users__items-text {
+    transform: translateY(-5px);
 }
 
 .users__items-button {
@@ -242,12 +312,18 @@ body {
     color: black;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.users__items:hover .users__items-button button {
+    background-color: #6195FF;
+    color: white;
+    box-shadow: 0 4px 10px rgba(97, 149, 255, 0.3);
 }
 
 .blog2 {
     width: 100%;
     height: 340px;
-    /*background-image: url('./assets/img/blog2.jpg');*/
     background-size: cover;
     background-position: center;
     background-color: #d7e1dd;
@@ -264,18 +340,18 @@ body {
 .connected_gas {
     width: 530px;
     height: 270px;
-    background-color: #01AB8C;
+    background-color: #035F8F;
     margin-right: 20px;
     position: relative;
     overflow: hidden;
 }
 
 .connected_gas-text {
-    position: absolute; /* Абсолютное позиционирование */
-    top: 20px; /* Отступ сверху */
-    left: 20px; /* Отступ слева */
-    width: calc(100% - 40px); /* Ширина текстового блока с учетом отступов */
-    z-index: 2; /* Чтобы текст был поверх изображения */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+    z-index: 2;
 }
 
 .connected_gas-img {
@@ -288,61 +364,61 @@ body {
 }
 
 .connected_gas-img img {
-    width: 100%; /* Ширина изображения на всю ширину блока */
-    height: 100%; /* Высота изображения на всю высоту блока */
-    transition: transform 0.3s ease; /* Плавный переход для hover-эффекта */
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
 
 }
 
 .connected_gas:hover .connected_gas-img img {
-    transform: scale(1.1); /* Увеличение изображения при наведении */
+    transform: scale(1.1);
 }
 
 .connected_gas-text p {
-    margin: 10px 0 0; /* Отступ сверху для параграфа */
-    font-size: 15px; /* Размер шрифта параграфа */
-    color: #fff; /* Цвет текста */
-    letter-spacing: 0.3px; /* Отступ между символами */
-    line-height: 1.5; /* Межстрочный интервал */
-    font-family: 'Arial', sans-serif; /* Шрифт */
+    margin: 10px 0 0;
+    font-size: 15px;
+    color: #fff;
+    letter-spacing: 0.3px;
+    line-height: 1.5;
+    font-family: 'Arial', sans-serif;
 }
 
 .connected_gas-text h4 {
     margin: 0;
-    font-size: 20px; /* Размер шрифта заголовка */
-    color: #fff; /* Цвет текста */
+    font-size: 20px;
+    color: #fff;
 }
 
 .disconnected_gas {
     width: 530px;
     height: 270px;
-    background-color: #0393A8;
+    background-color: #025178;
     margin-left: 20px;
     position: relative;
     overflow: hidden;
 }
 
 .disconnected_gas-text {
-    position: absolute; /* Абсолютное позиционирование */
-    top: 20px; /* Отступ сверху */
-    left: 20px; /* Отступ слева */
-    width: calc(100% - 40px); /* Ширина текстового блока с учетом отступов */
-    z-index: 2; /* Чтобы текст был поверх изображения */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+    z-index: 2;
 }
 
 .disconnected_gas-text h4 {
     margin: 0;
-    font-size: 20px; /* Размер шрифта заголовка */
-    color: #fff; /* Цвет текста */
+    font-size: 20px;
+    color: #fff;
 }
 
 .disconnected_gas-text p {
-    margin: 10px 0 0; /* Отступ сверху для параграфа */
-    font-size: 15px; /* Размер шрифта параграфа */
-    color: #fff; /* Цвет текста */
-    letter-spacing: 0.3px; /* Отступ между символами */
-    line-height: 1.5; /* Межстрочный интервал */
-    font-family: 'Arial', sans-serif; /* Шрифт */
+    margin: 10px 0 0;
+    font-size: 15px;
+    color: #fff;
+    letter-spacing: 0.3px;
+    line-height: 1.5;
+    font-family: 'Arial', sans-serif;
 }
 
 .disconnected_gas-img {
@@ -355,22 +431,20 @@ body {
 }
 
 .disconnected_gas-img img {
-    width: 100%; /* Ширина изображения на всю ширину блока */
-    height: 100%; /* Высота изображения на всю высоту блока */
-    object-fit: cover; /* Чтобы изображение заполнило весь блок */
-    transition: transform 0.3s ease; /* Плавный переход для hover-эффекта */
-
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
 .disconnected_gas:hover .disconnected_gas-img img {
-    transform: scale(1.1); /* Увеличение изображения при наведении */
+    transform: scale(1.1);
 }
-
 
 .footer {
     width: 100%;
-    height: 150px;
-    background-color: #035F8F;
+    height: 120px;
+    background-color: #025178;
 }
 
 .footer_content {
@@ -378,7 +452,7 @@ body {
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
-    height: 150px;
+    height: 120px;
 }
 
 .footer_content-logo {
@@ -397,7 +471,9 @@ body {
 
 .footer_content-company_name {
     font-size: 25px;
-    color: #e5eded;
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
 }
 
 .footer_content-contacts {
@@ -408,4 +484,118 @@ body {
 .footer_content-contacts ul {
     list-style: none;
     padding: 0 -20px;
+}
+
+.maintenance {
+    width: 100%;
+    background-color: #035F8F;
+    padding: 40px 0;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.maintenance__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.maintenance__content-topic h4 {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.maintenance__content-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.maintenance__content-text {
+    flex: 1;
+    max-width: 60%;
+}
+
+.maintenance__content-text .intro {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #f0f0f0;
+}
+
+.maintenance__content-text .details {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+.maintenance__content-image {
+    flex: 1;
+    max-width: 40%;
+}
+
+.maintenance__content-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.maintenance__content-topic h4,
+.maintenance__content-text .intro,
+.maintenance__content-text .details {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.maintenance__content-topic {
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-info {
+    width: 100%;
+    background-color: #dae1e1;
+    padding: 60px 0;
+}
+
+.contact-info__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contact__items {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact__items:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact__item-icon img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.contact__item-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact__item-valuer {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
 }
