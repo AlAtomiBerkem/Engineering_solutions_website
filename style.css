@@ -838,3 +838,10 @@ body {
         padding: 8px 16px;
     }
 }
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+}
