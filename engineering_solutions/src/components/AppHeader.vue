@@ -1,0 +1,130 @@
+<template>
+  <div>
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <div class="header-logo"><img src="@/assets/logo10.png" alt="logo"></div>
+          <p class="header__company-name">Инженерные решения</p>
+          <div class="header__button">
+            <!--          <a href="./TechnicalWork.html">-->
+            <button class="header__button-button"><strong>Личный кабинет</strong>
+              <img class="button-svg" src="@/assets/svg/user.svg" alt="user">
+            </button>
+            <!--          </a>-->
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+</template>
+
+<script>
+
+</script>
+
+<style scoped>
+.container {
+  padding: 0 80px;
+}
+
+.header {
+  width: 100%;
+  height: 70px;
+  background-color: #035F8F;
+  align-items: center;
+  justify-content: center;
+}
+.header-content {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo{
+  width: 65px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.header__button {
+  padding-bottom:25px;
+}
+
+.header__button-button {
+  margin-top: 30px;
+  width: 160px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #E4BD3F;
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.header__button-button:active {
+  background-color: #C4981F;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+}
+
+
+.header__button-button .button-svg {
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+}
+
+.header__button-button:hover .button-svg {
+  width: 27px;
+  height: 27px;
+  transform: rotate(360deg);
+}
+
+.button-svg {
+  width: 25px;
+  height: 25px;
+  padding-left: 20px;
+}
+
+.header-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.header__company-name {
+  font-size: 30px;
+  color: white;
+  padding-right: 380px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+
+}
+
+@media (max-width: 1200px) {
+  .header__company-name {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__company-name {
+    font-size: 20px;
+  }
+}
+
+</style>
