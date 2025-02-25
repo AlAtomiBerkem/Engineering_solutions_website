@@ -1,0 +1,90 @@
+<template>
+  <div>
+    <div class="hero">
+      <div class="container">
+        <div class="hero__content">
+          <div class="hero__text-box">
+            <p>Техническое обслуживание и эксплуатация газораспределительных систем</p>
+          </div>
+            <button class="hero-button"><strong>Подключить газ</strong></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+
+</script>
+
+<style scoped>
+
+.hero {
+  width: 100%;
+  height: 400px;
+  background-image: url('@/assets/img/hero_photo.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 400px;
+  background-color: rgba(2, 81, 120, 0.55);
+  flex-direction: column;
+  margin-right: 80px;
+}
+
+.hero__text-box {
+  width: 300px;
+  height: 250px;
+  display: flex;
+  padding-left: 10px;
+}
+
+.hero__text-box p {
+  padding-right: 5px;
+  color: white;
+  text-align: left;
+  font-size: 25px;
+  line-height: 1.6;
+  text-shadow: 0 1px 0 #035F8F;
+}
+
+
+.hero-button {
+  margin-top: 30px;
+  width: 200px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #E4BD3F;
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #D4A82F;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.hero-button:active {
+  background-color: #C4981F;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+}
+
+</style>
