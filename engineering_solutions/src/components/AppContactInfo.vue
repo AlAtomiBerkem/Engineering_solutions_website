@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="contact-info">
+    <div class="contact-info" id="contactAncor">
       <div class="container">
         <div class="contact-info__content">
           <div class="contact__items">

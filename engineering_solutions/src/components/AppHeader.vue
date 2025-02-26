@@ -6,10 +6,13 @@
           <div class="header-logo"><img src="@/assets/logo10.png" alt="logo"></div>
           <p class="header__company-name">Инженерные решения</p>
           <div class="header__button">
-            <!--          <a href="./TechnicalWork.html">-->
-            <button class="header__button-button"><strong>Личный кабинет</strong>
-              <img class="button-svg" src="@/assets/svg/user.svg" alt="user">
-            </button>
+            <router-link to="PageTechnicalWork">
+              <button class="header__button-button"><strong>Личный кабинет</strong>
+                <img class="button-svg" src="@/assets/svg/user.svg" alt="user">
+              </button>
+            </router-link>
+            <router-view to="/:pathMatch(.*)*"></router-view>
+
             <!--          </a>-->
           </div>
         </div>
