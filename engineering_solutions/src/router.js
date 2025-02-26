@@ -2,12 +2,12 @@ import { createRouter, createWebHistory } from 'vue-router';
 import PageContent from "@/pages/PageContent.vue";
 import PageNotFound from "@/pages/PageNotFound.vue";
 import PageTechnicalWork from "@/pages/PageTechnicalWork.vue";
-import App from "@/App.vue";
+import MainPage from "@/pages/MainPage.vue";
 
 const routes = [
     {
         path: "/",
-        component: App,
+        component: MainPage,
     },
     {
         path: "/PageContent",
@@ -24,7 +24,20 @@ const routes = [
 ]
 
 const router = createRouter({
-    history: createWebHistory(), routes
+    history: createWebHistory(),
+    routes,
+    scrollBehavior(to, from, savedPosition) {
+        if (to.hash) {
+            return {
+                el: to.hash,
+                behavior: 'smooth',
+            };
+        } else if (savedPosition) {
+            return savedPosition;
+        } else {
+            return { top: 0 };
+        }
+    },
 });
 
 export default router;

@@ -3,17 +3,28 @@
     <nav class="navigate">
       <div class="container">
         <ul class="navigate__list">
-          <li class="navigate__item"><router-view to="/" class="navigate__link">Главная</router-view></li>
-          <li class="navigate__item"><router-view to="PageContent" class="navigate__link">Подключение газа</router-view></li>
-          <li class="navigate__item"><a href="#" class="navigate__link">Техническое обслуживание</a></li>
-          <li class="navigate__item"><a href="PageContent" class="navigate__link">Юридическим лицам</a></li>
-          <li class="navigate__item"><a href="PageContent" class="navigate__link">Прилогающеяся документы</a></li>
-          <li class="navigate__item"><a href="PageContent" class="navigate__link">Контакты</a></li>
-          <router-view></router-view>
-
+          <li class="navigate__item">
+            <router-link to="/" class="navigate__link">Главная</router-link>
+          </li>
+          <li class="navigate__item">
+            <router-link to="/PageContent" class="navigate__link">Подключение газа</router-link>
+          </li>
+          <li class="navigate__item">
+            <router-link to="/#maintenanceAncor" class="navigate__link">Техническое обслуживание</router-link>
+          </li>
+          <li class="navigate__item">
+            <router-link to="/PageContent" class="navigate__link">Юридическим лицам</router-link>
+          </li>
+          <li class="navigate__item">
+            <router-link to="/PageContent" class="navigate__link">Прилагающиеся документы</router-link>
+          </li>
+          <li class="navigate__item">
+            <router-link to="/#contactAncor" class="navigate__link">Контакты</router-link>
+          </li>
         </ul>
       </div>
     </nav>
+    <router-view></router-view> <!-- Это место для отображения текущего маршрута -->
   </div>
 </template>
 
