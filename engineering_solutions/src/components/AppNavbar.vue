@@ -3,12 +3,14 @@
     <nav class="navigate">
       <div class="container">
         <ul class="navigate__list">
-          <li class="navigate__item"><a href="#" class="navigate__link">Главная</a></li>
-          <li class="navigate__item"><a href="./page2.html" class="navigate__link">Подключение газа</a></li>
-          <li class="navigate__item"><a href="#maintenanceAncor" class="navigate__link">Техническое обслуживание</a></li>
-          <li class="navigate__item"><a href="./page2.html#urlitsa" class="navigate__link">Юридическим лицам</a></li>
-          <li class="navigate__item"><a href="./page2.html" class="navigate__link">Прилогающеяся документы</a></li>
-          <li class="navigate__item"><a href="#contacts" class="navigate__link">Контакты</a></li>
+          <li class="navigate__item"><router-view to="/" class="navigate__link">Главная</router-view></li>
+          <li class="navigate__item"><router-view to="PageContent" class="navigate__link">Подключение газа</router-view></li>
+          <li class="navigate__item"><a href="#" class="navigate__link">Техническое обслуживание</a></li>
+          <li class="navigate__item"><a href="PageContent" class="navigate__link">Юридическим лицам</a></li>
+          <li class="navigate__item"><a href="PageContent" class="navigate__link">Прилогающеяся документы</a></li>
+          <li class="navigate__item"><a href="PageContent" class="navigate__link">Контакты</a></li>
+          <router-view></router-view>
+
         </ul>
       </div>
     </nav>

@@ -5,10 +5,11 @@
     <AppHeroBlock />
     <AppUsersBlock />
     <AppNaturalGasBlock />
+    <AppMaintenance />
     <AppContactInfo />
     <AppFooter />
+    <router-view></router-view>
   </div>
-
 </template>
 
 <script setup>
@@ -19,6 +20,7 @@ import AppUsersBlock from "@/components/AppUsersBlock.vue";
 import AppNaturalGasBlock from "@/components/AppNaturalGasBlock.vue";
 import AppContactInfo from "@/components/AppContactInfo.vue";
 import AppFooter from "@/components/AppFooter.vue";
+import AppMaintenance from "@/components/AppMaintenance.vue";
 </script>
 
 <style>
@@ -43,5 +45,11 @@ body {
 
 .container {
   padding: 0 80px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
 }
 </style>
