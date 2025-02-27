@@ -15,7 +15,7 @@
           </div>
           <div class="contact__items">
             <div class="contact__item-icon"><img src="@/assets/svg/contact__target.svg" alt=""></div>
-            <div class="contact__item-text">Адресс</div>
+            <div class="contact__item-text">Адрес</div>
             <div class="contact__item-valuer">г.Казань, тер. Химград, д.41, офис 4</div>
           </div>
         </div>
@@ -28,17 +28,25 @@
 </script>
 
 <style scoped>
-
 .contact-info {
   width: 100%;
   background-color: #035F8F;
   padding: 60px 0;
 }
 
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
 .contact-info__content {
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .contact__items {
@@ -49,6 +57,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
 }
 
 .contact__items:hover {
@@ -73,5 +82,84 @@
   font-size: 16px;
   color: #666;
   line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .contact-info {
+    padding: 40px 0;
+  }
+
+  .contact-info__content {
+    gap: 15px;
+  }
+
+  .contact__items {
+    padding: 15px;
+  }
+
+  .contact__item-icon img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .contact__item-text {
+    font-size: 16px;
+  }
+
+  .contact__item-valuer {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-info__content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact__items {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .contact__item-icon img {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 10px;
+  }
+
+  .contact__item-text {
+    font-size: 16px;
+  }
+
+  .contact__item-valuer {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-info {
+    padding: 30px 0;
+  }
+
+  .contact__items {
+    padding: 15px;
+  }
+
+  .contact__item-icon img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 8px;
+  }
+
+  .contact__item-text {
+    font-size: 14px;
+  }
+
+  .contact__item-valuer {
+    font-size: 12px;
+  }
 }
 </style>

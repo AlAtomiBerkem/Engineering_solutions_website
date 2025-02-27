@@ -5,7 +5,6 @@
         <div class="footer_content">
           <div class="footer_content-logo"><img src="@/assets/logo10.png" alt="logo"></div>
           <div class="footer_content-company_name">Инженерные решения</div>
-          <!--                <div class="social media"></div>-->
           <div class="footer_content-contacts">
             <ul>
               <li><strong>адресс:</strong>  аддрес: 420006, Татарстан, г.Казань, тер. Химград, д.41, офис 4</li>
@@ -24,11 +23,10 @@
 </script>
 
 <style scoped>
-
 .footer {
   width: 100%;
-  height: 120px;
   background-color: #025178;
+  padding: 20px 0;
 }
 
 .footer_content {
@@ -36,7 +34,7 @@
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-  height: 120px;
+  flex-wrap: wrap;
 }
 
 .footer_content-logo {
@@ -67,6 +65,36 @@
 
 .footer_content-contacts ul {
   list-style: none;
-  padding: 0 -20px;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .footer_content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer_content-company_name {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+  .footer_content-contacts ul {
+    padding: 0;
+  }
+
+  .footer_content-contacts ul li {
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer_content-company_name {
+    font-size: 18px;
+  }
+
+  .footer_content-contacts ul li {
+    font-size: 14px;
+  }
 }
 </style>

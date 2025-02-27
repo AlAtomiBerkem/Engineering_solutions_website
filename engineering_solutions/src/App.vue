@@ -5,7 +5,6 @@
 </template>
 
 <script setup>
-// import MainPage from "@/pages/MainPage.vue";
 </script>
 
 <style>
@@ -36,5 +35,31 @@ a {
   text-decoration: none;
   color: inherit;
   outline: none;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  body {
+    font-size: 13px;
+  }
 }
 </style>

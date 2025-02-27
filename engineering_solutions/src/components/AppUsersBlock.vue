@@ -13,17 +13,16 @@
             </div>
           </div>
           <div class="users__items">
-            <div class="users__items-text"><strong>Юридические лица</strong>
-            </div>
+            <div class="users__items-text"><strong>Юридические лица</strong></div>
             <div class="users__items-icon">
-              <img src="@/assets/svg/ooo.svg" alt="ooo"></div>
+              <img src="@/assets/svg/ooo.svg" alt="ooo">
+            </div>
             <div class="users__items-button">
               <button><strong>Подробнее</strong></button>
             </div>
           </div>
           <div class="users__items">
-            <div class="users__items-text"><strong>Индивидуальные предприниматели</strong>
-            </div>
+            <div class="users__items-text"><strong>Индивидуальные предприниматели</strong></div>
             <div class="users__items-icon">
               <img src="@/assets/svg/ip.svg" alt="ip">
             </div>
@@ -32,7 +31,7 @@
             </div>
           </div>
           <div class="users__items">
-            <div class="users__items-text"><strong>садоводческие или огороднические некоммерческие товарищества</strong></div>
+            <div class="users__items-text"><strong>Садоводческие или огороднические некоммерческие товарищества</strong></div>
             <div class="users__items-icon">
               <img src="@/assets/svg/snt.svg" alt="snt">
             </div>
@@ -47,37 +46,57 @@
 </template>
 
 <script setup>
-
 </script>
 
 <style scoped>
-
 .users {
   width: 100%;
-  height: 280px;
   background-color: #035F8F;
+  padding: 20px 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Медиазапрос для мобильных устройств */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+}
+
+/* Медиазапрос для очень маленьких экранов */
+@media (max-width: 480px) {
+  .container {
+    padding: 5px;
+  }
 }
 
 .users__block {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  width: 100%;
-  height: 280px;
+  gap: 20px;
 }
 
 .users__items {
-  margin: 10px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 10px;
-  width: 250px;
+  flex: 1 1 calc(25% - 20px);
+  max-width: calc(25% - 20px);
   height: 200px;
   background-color: rgb(240, 244, 245);
   border-radius: 10px;
   padding: 15px;
   transition: all 0.3s ease;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .users__items:hover {
@@ -92,7 +111,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 40px;
 }
 
 .users__items-icon img {
@@ -108,6 +126,8 @@
 
 .users__items-text {
   font-size: 16px;
+  text-align: center;
+  margin-bottom: 10px;
   transition: all 0.3s ease;
 }
 
@@ -117,15 +137,13 @@
 
 .users__items-button {
   display: flex;
-  align-items: end;
-  margin-bottom: 15px;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .users__items-button button {
   width: 150px;
   height: 35px;
-  justify-content: center;
-  align-items: center;
   border: none;
   background-color: #ebebed;
   color: black;
@@ -140,4 +158,60 @@
   box-shadow: 0 4px 10px rgba(97, 149, 255, 0.3);
 }
 
+/* Адаптация для планшетов */
+@media (max-width: 1024px) {
+  .users__items {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+    height: 180px;
+  }
+
+  .users__items-text {
+    font-size: 14px;
+  }
+
+  .users__items-button button {
+    width: 130px;
+    height: 30px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .users__items {
+    flex: 1 1 calc(100% - 20px);
+    max-width: calc(100% - 20px);
+    height: auto;
+  }
+
+  .users__items-icon {
+    margin-bottom: 10px;
+  }
+
+  .users__items-text {
+    font-size: 16px;
+  }
+
+  .users__items-button button {
+    width: 100%;
+    max-width: 200px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .users__items {
+    padding: 15px;
+  }
+
+  .users__items-text {
+    font-size: 14px;
+  }
+
+  .users__items-button button {
+    height: 35px;
+    font-size: 14px;
+  }
+}
 </style>

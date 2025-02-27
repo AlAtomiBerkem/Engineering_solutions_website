@@ -18,7 +18,6 @@
 </script>
 
 <style scoped>
-
 .hero {
   width: 100%;
   height: 400px;
@@ -56,7 +55,6 @@
   text-shadow: 0 1px 0 #035F8F;
 }
 
-
 .hero-button {
   margin-top: 30px;
   width: 200px;
@@ -87,4 +85,46 @@
   transform: translateY(0);
 }
 
+/* Медиазапросы для адаптации под мобильные устройства */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 50px 0;
+  }
+
+  .hero__content {
+    width: 90%;
+    height: auto;
+    margin-right: 0;
+    padding: 20px;
+  }
+
+  .hero__text-box {
+    width: 100%;
+    height: auto;
+    padding-left: 0;
+  }
+
+  .hero__text-box p {
+    font-size: 20px;
+    padding-right: 0;
+  }
+
+  .hero-button {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__text-box p {
+    font-size: 18px;
+  }
+
+  .hero-button {
+    height: 45px;
+    font-size: 16px;
+  }
+}
 </style>
