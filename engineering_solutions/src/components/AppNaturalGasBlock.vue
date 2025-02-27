@@ -23,7 +23,7 @@
   </div>
 </template>
 
-<script setup >
+<script setup>
 </script>
 
 <style scoped>
@@ -38,23 +38,27 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .blog2-content {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .connected_gas,
 .disconnected_gas {
-  width: 530px;
+  width: 100%;
+  max-width: 530px;
   height: 270px;
   background-color: #035F8F;
   position: relative;
   overflow: hidden;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
 }
 
 .connected_gas:hover,
@@ -112,7 +116,6 @@
   transform: scale(1.1);
 }
 
-/* Адаптация для планшетов */
 @media (max-width: 1024px) {
   .connected_gas,
   .disconnected_gas {
@@ -131,7 +134,6 @@
   }
 }
 
-/* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
   .blog2-content {
     flex-direction: column;
@@ -157,7 +159,6 @@
   }
 }
 
-/* Адаптация для очень маленьких экранов */
 @media (max-width: 480px) {
   .connected_gas,
   .disconnected_gas {

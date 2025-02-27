@@ -8,7 +8,6 @@
           <div class="burger-line"></div>
           <div class="burger-line"></div>
         </div>
-        <!-- Список навигации -->
         <ul class="navigate__list" :class="{ 'active': isMenuOpen }">
           <li class="navigate__item">
             <router-link to="/" class="navigate__link">Главная</router-link>
@@ -31,7 +30,7 @@
         </ul>
       </div>
     </nav>
-    <router-view></router-view> <!-- Это место для отображения текущего маршрута -->
+    <router-view></router-view>
   </div>
 </template>
 
@@ -64,6 +63,7 @@ const toggleMenu = () => {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .navigate__list {
@@ -117,8 +117,8 @@ const toggleMenu = () => {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Адаптация для мобильных устройств */
-@media (max-width: 768px) {
+
+@media (max-width: 850px) {
   .burger-menu {
     display: flex;
   }
@@ -145,6 +145,20 @@ const toggleMenu = () => {
 
   .navigate__link {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .navigate__item {
+    margin: 10px 0;
+  }
+
+  .navigate__link {
+    font-size: 16px;
   }
 }
 </style>

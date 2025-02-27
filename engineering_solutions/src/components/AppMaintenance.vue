@@ -34,7 +34,6 @@
 </script>
 
 <style scoped>
-
 .maintenance {
   width: 100%;
   background-color: #035F8F;
@@ -103,4 +102,44 @@
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
+@media (max-width: 768px) {
+  .maintenance__content-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .maintenance__content-text {
+    max-width: 100%;
+  }
+
+  .maintenance__content-image {
+    max-width: 100%;
+  }
+
+  .maintenance__content-topic h4 {
+    font-size: 24px;
+  }
+
+  .maintenance__content-text .intro {
+    font-size: 16px;
+  }
+
+  .maintenance__content-text .details {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .maintenance__content-topic h4 {
+    font-size: 20px;
+  }
+
+  .maintenance__content-text .intro {
+    font-size: 14px;
+  }
+
+  .maintenance__content-text .details {
+    font-size: 12px;
+  }
+}
 </style>

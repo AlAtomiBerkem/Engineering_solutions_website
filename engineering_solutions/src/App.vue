@@ -5,7 +5,6 @@
 </template>
 
 <script setup>
-// import MainPage from "@/pages/MainPage.vue";
 </script>
 
 <style>
@@ -38,32 +37,29 @@ a {
   outline: none;
 }
 
-/* Адаптация для планшетов */
 @media (max-width: 1200px) {
   .container {
-    padding: 0 40px; /* Уменьшаем отступы */
+    padding: 0 40px;
   }
 }
 
-/* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
   .container {
-    padding: 0 20px; /* Ещё меньше отступы */
+    padding: 0 20px;
   }
 
   body {
-    font-size: 14px; /* Уменьшаем размер шрифта для мобильных устройств */
+    font-size: 14px;
   }
 }
 
-/* Адаптация для очень маленьких экранов */
 @media (max-width: 480px) {
   .container {
-    padding: 0 10px; /* Минимальные отступы */
+    padding: 0 10px;
   }
 
   body {
-    font-size: 13px; /* Ещё меньше размер шрифта */
+    font-size: 13px;
   }
 }
 </style>

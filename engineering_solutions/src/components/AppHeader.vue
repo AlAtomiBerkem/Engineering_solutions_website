@@ -3,8 +3,10 @@
     <header class="header">
       <div class="container">
         <div class="header-content">
-          <div class="header-logo"><img src="@/assets/logo10.png" alt="logo"></div>
-          <p class="header__company-name">Инженерные решения</p>
+          <div class="header-logo-name">
+            <div class="header-logo"><img src="@/assets/logo10.png" alt="logo"></div>
+            <p class="header__company-name">Инженерные решения</p>
+          </div>
           <div class="header__button">
             <router-link to="PageTechnicalWork">
               <button class="header__button-button">
@@ -21,7 +23,6 @@
 </template>
 
 <script setup>
-
 </script>
 
 <style scoped>
@@ -43,6 +44,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.header-logo-name {
+  display: flex;
+  align-items: center;
 }
 
 .header-logo {
@@ -111,16 +117,15 @@
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   letter-spacing: 1.5px;
+  margin-left: 15px;
 }
 
-/* Адаптация для планшетов */
 @media (max-width: 1200px) {
   .header__company-name {
     font-size: 25px;
   }
 }
 
-/* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
   .container {
     padding: 0 20px;
@@ -138,7 +143,7 @@
   }
 
   .header__button-button .button-text {
-    display: none; /* Скрываем текст в кнопке */
+    display: none;
   }
 
   .header__button-button .button-svg {
@@ -147,7 +152,6 @@
   }
 }
 
-/* Адаптация для очень маленьких экранов */
 @media (max-width: 480px) {
   .header__company-name {
     font-size: 18px;
@@ -156,7 +160,7 @@
   .header__button-button {
     width: 35px;
     height: 35px;
-    border-radius: 50%; /* Делаем кнопку круглой */
+    border-radius: 50%;
   }
 
   .header__button-button .button-svg {

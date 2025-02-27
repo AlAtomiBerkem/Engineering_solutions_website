@@ -156,18 +156,17 @@ import AppFooter from "@/components/AppFooter.vue";
 
 /* Цвета для блоков */
 .gas-connection {
-  background-color: #f0f8ff; /* Светлый фон */
+  background-color: #f0f8ff;
 }
 
 .individuals {
-  background-color: #e6f7ff; /* Светлый фон */
+  background-color: #e6f7ff;
 }
 
 .legal-entities {
-  background-color: #f0f8ff; /* Светлый фон */
+  background-color: #f0f8ff;
 }
 
-/* Адаптивность для блоков */
 @media (max-width: 1200px) {
   .block .container {
     width: 100%;
@@ -176,7 +175,7 @@ import AppFooter from "@/components/AppFooter.vue";
 
 @media (max-width: 768px) {
   .block {
-    justify-content: center; /* Центрируем текст на мобильных */
+    justify-content: center;
   }
 
   .block .container {

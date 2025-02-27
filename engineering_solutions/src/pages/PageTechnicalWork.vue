@@ -69,4 +69,34 @@ import AppFooter from "@/components/AppFooter.vue";
   background-color: #025178;
   transform: translateY(0);
 }
+
+@media (max-width: 768px) {
+  .maintenance-page__title {
+    font-size: 60px;
+  }
+
+  .maintenance-page__description {
+    font-size: 20px;
+  }
+
+  .maintenance-page__button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .maintenance-page__title {
+    font-size: 48px;
+  }
+
+  .maintenance-page__description {
+    font-size: 18px;
+  }
+
+  .maintenance-page__button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
 </style>

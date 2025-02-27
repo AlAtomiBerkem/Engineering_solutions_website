@@ -46,7 +46,6 @@
 </template>
 
 <script setup>
-
 </script>
 
 <style scoped>
@@ -61,6 +60,21 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Медиазапрос для мобильных устройств */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+}
+
+/* Медиазапрос для очень маленьких экранов */
+@media (max-width: 480px) {
+  .container {
+    padding: 5px;
+  }
 }
 
 .users__block {
@@ -71,17 +85,18 @@
 }
 
 .users__items {
-  margin: 10px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 10px;
-  width: 250px;
+  flex: 1 1 calc(25% - 20px);
+  max-width: calc(25% - 20px);
   height: 200px;
   background-color: rgb(240, 244, 245);
   border-radius: 10px;
   padding: 15px;
   transition: all 0.3s ease;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .users__items:hover {
@@ -96,7 +111,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 40px;
 }
 
 .users__items-icon img {
@@ -112,6 +126,8 @@
 
 .users__items-text {
   font-size: 16px;
+  text-align: center;
+  margin-bottom: 10px;
   transition: all 0.3s ease;
 }
 
@@ -121,15 +137,13 @@
 
 .users__items-button {
   display: flex;
-  align-items: end;
-  margin-bottom: 15px;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .users__items-button button {
   width: 150px;
   height: 35px;
-  justify-content: center;
-  align-items: center;
   border: none;
   background-color: #ebebed;
   color: black;
@@ -147,7 +161,8 @@
 /* Адаптация для планшетов */
 @media (max-width: 1024px) {
   .users__items {
-    width: 220px;
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
     height: 180px;
   }
 
@@ -162,35 +177,19 @@
   }
 }
 
-/* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
-  .users__block {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .users__items {
-    width: 100%;
-    max-width: 300px;
+    flex: 1 1 calc(100% - 20px);
+    max-width: calc(100% - 20px);
     height: auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    padding: 20px;
   }
 
   .users__items-icon {
-    padding-left: 0;
-    justify-content: flex-start;
+    margin-bottom: 10px;
   }
 
   .users__items-text {
     font-size: 16px;
-    text-align: center;
-  }
-
-  .users__items-button {
-    justify-content: center;
-    margin-bottom: 10px;
   }
 
   .users__items-button button {
@@ -201,7 +200,6 @@
   }
 }
 
-/* Адаптация для очень маленьких экранов */
 @media (max-width: 480px) {
   .users__items {
     padding: 15px;

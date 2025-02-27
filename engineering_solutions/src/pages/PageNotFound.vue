@@ -8,10 +8,9 @@
         <p class="error-page__description">Упс! Страница, которую вы ищете, не существует.</p>
         <a href="/" class="error-page__button">Вернуться на главную</a>
       </div>
-      <AppFooter />
     </main>
+    <AppFooter />
   </div>
-
 </template>
 
 <script setup>
@@ -20,8 +19,8 @@ import AppNavbar from "@/components/AppNavbar.vue";
 import AppFooter from "@/components/AppFooter.vue";
 </script>
 
-<style scoped>
 
+<style scoped>
 .error-page {
   display: flex;
   justify-content: center;
@@ -70,5 +69,36 @@ import AppFooter from "@/components/AppFooter.vue";
 .error-page__button:active {
   background-color: #025178;
   transform: translateY(0);
+}
+
+/* Медиазапросы для адаптации под мобильные устройства */
+@media (max-width: 768px) {
+  .error-page__title {
+    font-size: 80px;
+  }
+
+  .error-page__description {
+    font-size: 20px;
+  }
+
+  .error-page__button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-page__title {
+    font-size: 60px;
+  }
+
+  .error-page__description {
+    font-size: 18px;
+  }
+
+  .error-page__button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
 }
 </style>

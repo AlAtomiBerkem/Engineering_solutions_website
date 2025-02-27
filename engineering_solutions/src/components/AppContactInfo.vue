@@ -15,7 +15,7 @@
           </div>
           <div class="contact__items">
             <div class="contact__item-icon"><img src="@/assets/svg/contact__target.svg" alt=""></div>
-            <div class="contact__item-text">Адресс</div>
+            <div class="contact__item-text">Адрес</div>
             <div class="contact__item-valuer">г.Казань, тер. Химград, д.41, офис 4</div>
           </div>
         </div>
@@ -39,12 +39,14 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .contact-info__content {
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .contact__items {
@@ -55,6 +57,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
 }
 
 .contact__items:hover {
@@ -81,7 +84,6 @@
   line-height: 1.5;
 }
 
-/* Адаптация для планшетов */
 @media (max-width: 1024px) {
   .contact-info {
     padding: 40px 0;
@@ -110,7 +112,6 @@
   }
 }
 
-/* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
   .contact-info__content {
     flex-direction: column;
@@ -138,7 +139,6 @@
   }
 }
 
-/* Адаптация для очень маленьких экранов */
 @media (max-width: 480px) {
   .contact-info {
     padding: 30px 0;
