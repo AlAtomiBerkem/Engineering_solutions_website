@@ -7,13 +7,12 @@
           <p class="header__company-name">Инженерные решения</p>
           <div class="header__button">
             <router-link to="PageTechnicalWork">
-              <button class="header__button-button"><strong>Личный кабинет</strong>
+              <button class="header__button-button">
+                <strong class="button-text">Личный кабинет</strong>
                 <img class="button-svg" src="@/assets/svg/user.svg" alt="user">
               </button>
             </router-link>
             <router-view to="/:pathMatch(.*)*"></router-view>
-
-            <!--          </a>-->
           </div>
         </div>
       </div>
@@ -21,7 +20,7 @@
   </div>
 </template>
 
-<script>
+<script setup>
 
 </script>
 
@@ -37,6 +36,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .header-content {
   width: 100%;
   height: 70px;
@@ -45,7 +45,7 @@
   justify-content: space-between;
 }
 
-.header-logo{
+.header-logo {
   width: 65px;
   height: 65px;
   display: flex;
@@ -53,9 +53,8 @@
   align-items: center;
 }
 
-
 .header__button {
-  padding-bottom:25px;
+  padding-bottom: 25px;
 }
 
 .header__button-button {
@@ -82,7 +81,6 @@
   transform: translateY(0);
 }
 
-
 .header__button-button .button-svg {
   width: 24px;
   height: 24px;
@@ -107,27 +105,63 @@
   object-fit: contain;
 }
 
-
 .header__company-name {
   font-size: 30px;
   color: white;
-  padding-right: 380px;
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   letter-spacing: 1.5px;
-
 }
 
+/* Адаптация для планшетов */
 @media (max-width: 1200px) {
   .header__company-name {
     font-size: 25px;
   }
 }
 
+/* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
   .header__company-name {
     font-size: 20px;
   }
+
+  .header__button-button {
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .header__button-button .button-text {
+    display: none; /* Скрываем текст в кнопке */
+  }
+
+  .header__button-button .button-svg {
+    margin-left: 0;
+    padding-left: 0;
+  }
 }
 
+/* Адаптация для очень маленьких экранов */
+@media (max-width: 480px) {
+  .header__company-name {
+    font-size: 18px;
+  }
+
+  .header__button-button {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%; /* Делаем кнопку круглой */
+  }
+
+  .header__button-button .button-svg {
+    width: 20px;
+    height: 20px;
+  }
+}
 </style>

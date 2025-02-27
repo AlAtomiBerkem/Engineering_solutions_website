@@ -13,17 +13,16 @@
             </div>
           </div>
           <div class="users__items">
-            <div class="users__items-text"><strong>Юридические лица</strong>
-            </div>
+            <div class="users__items-text"><strong>Юридические лица</strong></div>
             <div class="users__items-icon">
-              <img src="@/assets/svg/ooo.svg" alt="ooo"></div>
+              <img src="@/assets/svg/ooo.svg" alt="ooo">
+            </div>
             <div class="users__items-button">
               <button><strong>Подробнее</strong></button>
             </div>
           </div>
           <div class="users__items">
-            <div class="users__items-text"><strong>Индивидуальные предприниматели</strong>
-            </div>
+            <div class="users__items-text"><strong>Индивидуальные предприниматели</strong></div>
             <div class="users__items-icon">
               <img src="@/assets/svg/ip.svg" alt="ip">
             </div>
@@ -32,7 +31,7 @@
             </div>
           </div>
           <div class="users__items">
-            <div class="users__items-text"><strong>садоводческие или огороднические некоммерческие товарищества</strong></div>
+            <div class="users__items-text"><strong>Садоводческие или огороднические некоммерческие товарищества</strong></div>
             <div class="users__items-icon">
               <img src="@/assets/svg/snt.svg" alt="snt">
             </div>
@@ -51,19 +50,24 @@
 </script>
 
 <style scoped>
-
 .users {
   width: 100%;
-  height: 280px;
   background-color: #035F8F;
+  padding: 20px 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .users__block {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  width: 100%;
-  height: 280px;
+  gap: 20px;
 }
 
 .users__items {
@@ -140,4 +144,76 @@
   box-shadow: 0 4px 10px rgba(97, 149, 255, 0.3);
 }
 
+/* Адаптация для планшетов */
+@media (max-width: 1024px) {
+  .users__items {
+    width: 220px;
+    height: 180px;
+  }
+
+  .users__items-text {
+    font-size: 14px;
+  }
+
+  .users__items-button button {
+    width: 130px;
+    height: 30px;
+    font-size: 14px;
+  }
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  .users__block {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .users__items {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 20px;
+  }
+
+  .users__items-icon {
+    padding-left: 0;
+    justify-content: flex-start;
+  }
+
+  .users__items-text {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .users__items-button {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .users__items-button button {
+    width: 100%;
+    max-width: 200px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+/* Адаптация для очень маленьких экранов */
+@media (max-width: 480px) {
+  .users__items {
+    padding: 15px;
+  }
+
+  .users__items-text {
+    font-size: 14px;
+  }
+
+  .users__items-button button {
+    height: 35px;
+    font-size: 14px;
+  }
+}
 </style>

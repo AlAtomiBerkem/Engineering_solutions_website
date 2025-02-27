@@ -2,7 +2,14 @@
   <div>
     <nav class="navigate">
       <div class="container">
-        <ul class="navigate__list">
+        <!-- Бургер-меню для мобильных устройств -->
+        <div class="burger-menu" @click="toggleMenu">
+          <div class="burger-line"></div>
+          <div class="burger-line"></div>
+          <div class="burger-line"></div>
+        </div>
+        <!-- Список навигации -->
+        <ul class="navigate__list" :class="{ 'active': isMenuOpen }">
           <li class="navigate__item">
             <router-link to="/" class="navigate__link">Главная</router-link>
           </li>
@@ -28,8 +35,14 @@
   </div>
 </template>
 
-<script setup >
+<script setup>
+import { ref } from 'vue';
 
+const isMenuOpen = ref(false);
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value;
+};
 </script>
 
 <style scoped>
@@ -39,6 +52,17 @@
   background-color: #025178;
   display: flex;
   justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -79,4 +103,48 @@
   width: 100%;
 }
 
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger-line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  .burger-menu {
+    display: flex;
+  }
+
+  .navigate__list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    background-color: #025178;
+    padding: 10px 0;
+  }
+
+  .navigate__list.active {
+    display: flex;
+  }
+
+  .navigate__item {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .navigate__link {
+    font-size: 18px;
+  }
+}
 </style>

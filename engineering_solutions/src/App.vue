@@ -37,4 +37,33 @@ a {
   color: inherit;
   outline: none;
 }
+
+/* Адаптация для планшетов */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 40px; /* Уменьшаем отступы */
+  }
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px; /* Ещё меньше отступы */
+  }
+
+  body {
+    font-size: 14px; /* Уменьшаем размер шрифта для мобильных устройств */
+  }
+}
+
+/* Адаптация для очень маленьких экранов */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px; /* Минимальные отступы */
+  }
+
+  body {
+    font-size: 13px; /* Ещё меньше размер шрифта */
+  }
+}
 </style>

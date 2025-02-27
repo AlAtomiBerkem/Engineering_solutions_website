@@ -28,11 +28,17 @@
 </script>
 
 <style scoped>
-
 .contact-info {
   width: 100%;
   background-color: #035F8F;
   padding: 60px 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .contact-info__content {
@@ -73,5 +79,87 @@
   font-size: 16px;
   color: #666;
   line-height: 1.5;
+}
+
+/* Адаптация для планшетов */
+@media (max-width: 1024px) {
+  .contact-info {
+    padding: 40px 0;
+  }
+
+  .contact-info__content {
+    gap: 15px;
+  }
+
+  .contact__items {
+    padding: 15px;
+  }
+
+  .contact__item-icon img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .contact__item-text {
+    font-size: 16px;
+  }
+
+  .contact__item-valuer {
+    font-size: 14px;
+  }
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  .contact-info__content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact__items {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .contact__item-icon img {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 10px;
+  }
+
+  .contact__item-text {
+    font-size: 16px;
+  }
+
+  .contact__item-valuer {
+    font-size: 14px;
+  }
+}
+
+/* Адаптация для очень маленьких экранов */
+@media (max-width: 480px) {
+  .contact-info {
+    padding: 30px 0;
+  }
+
+  .contact__items {
+    padding: 15px;
+  }
+
+  .contact__item-icon img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 8px;
+  }
+
+  .contact__item-text {
+    font-size: 14px;
+  }
+
+  .contact__item-valuer {
+    font-size: 12px;
+  }
 }
 </style>
